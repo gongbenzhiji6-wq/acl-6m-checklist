@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ACL再建術後 6ヶ月 復帰テスト チェックリスト</title>
+<style>
+:root{
+  --navy:#06245d; --green:#075d2b; --green2:#0d7a39; --orange:#ed4b12;
+  --line:#b9c5c8; --soft:#f7f9f7; --blue:#eaf2ff; --red:#e72c18;
+}
+*{box-sizing:border-box}
+body{margin:0;background:#eef2f4;color:#17221e;font-family:"Noto Sans JP","Yu Gothic",Meiryo,sans-serif}
+.page{max-width:1600px;margin:0 auto;background:#fff;padding:12px 14px 18px}
+.header{background:linear-gradient(90deg,#06245d,#07326f);color:#fff;border-radius:5px;padding:8px 16px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.title{font-size:clamp(20px,2.3vw,34px);font-weight:900;letter-spacing:.03em}
+.badge{background:#08722f;border:1px solid #73b88c;border-radius:5px;padding:6px 13px;font-weight:800;white-space:nowrap}
+.purpose{margin:8px 0;padding:6px 12px;border:1px solid #d6d0ad;border-radius:5px;background:#fffdf2;font-weight:800;text-align:left}
+.layout{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.panel{border:1px solid #c6d1ce;border-radius:7px;overflow:hidden}
+.panel h2{margin:0;padding:7px 10px;color:#fff;font-size:18px;text-align:center}
+.green h2{background:var(--green)}
+.orange h2{background:var(--orange)}
+table{width:100%;border-collapse:collapse;table-layout:fixed}
+th,td{border:1px solid var(--line);padding:5px 6px;vertical-align:middle}
+th{background:#f2f6f3;font-size:13px}
+.green th:nth-child(1){width:46px}.green th:nth-child(2){width:23%}.green th:nth-child(4){width:86px}
+.orange th:nth-child(1){width:46px}.orange th:nth-child(2){width:27%}.orange th:nth-child(4){width:90px}
+.no{font-weight:900;text-align:center;font-size:18px}
+.item{font-weight:900;font-size:15px;line-height:1.18}
+.small{font-size:11px;font-weight:600;line-height:1.35}
+.measure{font-size:12px;line-height:1.35}
+.criteria{font-weight:900;color:#174d2a;font-size:14px;text-align:center}
+.judge{text-align:center;white-space:nowrap}
+.judge input{transform:scale(1.25);margin-right:4px}
+.scorebox{display:flex;justify-content:flex-end;align-items:center;padding:6px 10px;border-top:2px solid #9ab2a4;font-weight:900;font-size:18px}
+.score{min-width:56px;border:2px solid #a7c0ad;border-radius:4px;text-align:center;padding:4px;margin-left:8px}
+.orange .score{border-color:#efb5a0}
+.quality td{font-size:12px}
+.qitem{font-weight:800;font-size:14px}
+.points{font-size:11px;line-height:1.3}
+.rating{display:flex;gap:4px;justify-content:center}
+.rating label{cursor:pointer;padding:2px 4px;border-radius:4px}
+.rating input{display:none}
+.rating label:has(input:checked){background:#ffe4d9;outline:1px solid #ed4b12;font-weight:900}
+.subgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:10px}
+.card{border:1px solid #c7d1ce;border-radius:7px;overflow:hidden}
+.card h3{margin:0;padding:6px 10px;font-size:16px;text-align:center}
+.card.green h3{background:#edf7ef;color:#12612e}
+.card.orange h3{background:#fff1ec;color:#e44b19}
+.criteria-table td{font-size:13px;text-align:center;padding:4px}
+.criteria-table td:first-child{font-weight:800}
+.final{margin-top:10px;border:1px solid #aab8d1;border-radius:7px;overflow:hidden}
+.final h3{margin:0;background:#092a66;color:#fff;text-align:center;padding:6px;font-size:17px}
+.final table td{font-size:13px;font-weight:800}
+.final .pass{color:#087b32}.final .warn{color:#df3a17}.final .fail{color:#e21e12}
+.overall{margin:10px;border-radius:8px;padding:12px;text-align:center;border:3px solid #9aa;display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;font-weight:900}
+.overall .overall-label{font-size:14px}
+.overall #overallText{font-size:30px;line-height:1}
+.overall #overallSub{font-size:13px}
+.overall.pass{background:#e8f7ec;border-color:#16833b;color:#075d2b}
+.overall.warn{background:#fff5df;border-color:#e59a16;color:#9a5a00}
+.overall.fail{background:#ffe9e6;border-color:#df3a17;color:#b51f0e}
+.overall.pending{background:#f3f5f6;border-color:#aab4b9;color:#536067}
+
+.checks{margin-top:10px;border:1px solid #a9c5b2;border-radius:7px;padding:8px 12px}
+.checks h3{margin:0 0 6px;color:#17632f;font-size:16px}
+.checks label{display:block;font-size:13px;margin:4px 0}
+.next{margin-top:10px;border:1px solid #c7d3df;border-radius:7px;padding:8px 12px}
+.next h3{text-align:center;color:#092a66;margin:0 0 8px}
+.flow{display:grid;grid-template-columns:repeat(5,1fr);gap:9px;align-items:center}
+.step{border:1px solid #ccd6dd;border-radius:6px;padding:10px 6px;text-align:center;min-height:70px;font-weight:800;font-size:13px;background:#f7fafc}
+.step:nth-child(2n){background:#fff9e8}.arrow{text-align:center;font-size:24px;color:#0b3b86;font-weight:900}
+.footer{font-size:11px;margin-top:9px;color:#555}
+button{background:#092a66;color:white;border:0;border-radius:5px;padding:8px 13px;font-weight:800;cursor:pointer}
+.actions{display:flex;justify-content:flex-end;gap:8px;margin:8px 0}
+@media(max-width:1050px){.layout{grid-template-columns:1fr}.flow{grid-template-columns:1fr}.arrow{transform:rotate(90deg)}}
+@media(max-width:650px){.page{padding:6px}.header{align-items:flex-start;flex-direction:column}.subgrid{grid-template-columns:1fr}th,td{padding:4px}.item{font-size:13px}}
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="header">
+    <div class="title">ACL再建術後 6ヶ月 復帰テスト チェックリスト</div>
+    <div class="badge">Gate 1：非対人練習への復帰判断</div>
+  </div>
+  <div class="purpose">目的：非対人練習へ安全に進めるかを判断するための総合評価
+    <span style="float:right;font-weight:700">採点方法：合格＝1点 ／ 不合格＝0点</span>
+  </div>
+
+  <div class="actions">
+    <button type="button" onclick="resetAll()">全てリセット</button>
+    <button type="button" onclick="window.print()">印刷</button>
+  </div>
+
+  <div class="layout">
+    <section class="panel green">
+      <h2>量的評価（Performance）</h2>
+      <table id="quantTable">
+        <thead><tr><th>No.</th><th>評価項目</th><th>測定方法・ポイント</th><th>6ヶ月 合格基準</th><th>判定（0/1点）</th></tr></thead>
+        <tbody>
+          <tr><td class="no">①</td><td class="item">片脚立ち上がり<br>（SLS）</td><td class="measure">台の高さ20cmを片脚で立ち上がれるかを評価</td><td class="criteria">20cm クリア</td><td class="judge"><label><input type="checkbox" class="qcheck"> 0 / 1</label></td></tr>
+          <tr><td class="no">②</td><td class="item">膝屈曲ROM</td><td class="measure">ゴニオメーターで最大屈曲角度を測定</td><td class="criteria">左右差 ≤ 5°</td><td class="judge"><label><input type="checkbox" class="qcheck"> 0 / 1</label></td></tr>
+          <tr><td class="no">③</td><td class="item">膝伸展ROM</td><td class="measure">ゴニオメーターで最大伸展角度を測定</td><td class="criteria">左右差 ≤ 3°</td><td class="judge"><label><input type="checkbox" class="qcheck"> 0 / 1</label></td></tr>
+          <tr><td class="no">④</td><td class="item">等尺性膝伸展筋力<br>（大腿四頭筋）</td><td class="measure">等尺性または等速性筋力測定（ハンドヘルドダイナモメーター or 等速性測定機器）</td><td class="criteria">LSI ≥ 80%</td><td class="judge"><label><input type="checkbox" class="qcheck"> 0 / 1</label></td></tr>
+          <tr><td class="no">⑤</td><td class="item">Hamstrings筋力</td><td class="measure">等尺性または等速性筋力測定（ハンドヘルドダイナモメーター or 等速性測定機器）</td><td class="criteria">LSI ≥ 80%</td><td class="judge"><label><input type="checkbox" class="qcheck"> 0 / 1</label></td></tr>
+          <tr><td class="no">⑥</td><td class="item">Single Hop<br>（片脚ホップ）</td><td class="measure">片脚で最大前方へHopして距離を測定</td><td class="criteria">LSI ≥ 80%</td><td class="judge"><label><input type="checkbox" class="qcheck"> 0 / 1</label></td></tr>
+          <tr><td class="no">⑦</td><td class="item">Triple Hop<br>（3連続ホップ）</td><td class="measure">同一脚で前方へ3回連続Hopし、距離を測定（2回実施の平均）</td><td class="criteria">LSI ≥ 80%</td><td class="judge"><label><input type="checkbox" class="qcheck"> 0 / 1</label></td></tr>
+          <tr><td class="no">⑧</td><td class="item">Crossover Hop<br>（クロスオーバーホップ）</td><td class="measure">ラインを跨ぎながら3回連続Hopし、距離を測定（2回実施の平均）</td><td class="criteria">LSI ≥ 80%</td><td class="judge"><label><input type="checkbox" class="qcheck"> 0 / 1</label></td></tr>
+          <tr><td class="no">⑨</td><td class="item">6m Timed Hop<br>（6mホップタイム）</td><td class="measure">片脚Hopで6mを往復する時間を測定（2回実施の平均）</td><td class="criteria">LSI ≥ 80%</td><td class="judge"><label><input type="checkbox" class="qcheck"> 0 / 1</label></td></tr>
+          <tr><td class="no">⑩</td><td class="item">T-test<br>（アジリティテスト）</td><td class="measure">T字のコーンを使用し、前後・左右への方向転換のタイムを測定</td><td class="criteria">左右差 ≤ 10%</td><td class="judge"><label><input type="checkbox" class="qcheck"> 0 / 1</label></td></tr>
+        </tbody>
+      </table>
+      <div class="scorebox">量的評価 合計点 <span class="score" id="qScore">0</span> / 10</div>
+    </section>
+
+    <section class="panel orange">
+      <h2>質的評価（Movement Quality）</h2>
+      <table id="qualTable" class="quality">
+        <thead><tr><th>No.</th><th>評価項目（動作の質）</th><th>評価基準・ポイント</th><th>判定（0/1点）</th></tr></thead>
+        <tbody>
+          <tr><td class="no">①</td><td class="qitem">両脚180°回旋着地<br>（180° スイッチ）</td><td class="points">・回旋時の体幹・骨盤コントロール<br>・膝・股関節の屈曲・衝撃吸収<br>・着地のアライメント</td><td class="rating"><label>○<input type="radio" name="q1" value="1"></label><label>△<input type="radio" name="q1" value="0"></label><label>×<input type="radio" name="q1" value="0"></label></td></tr>
+          <tr><td class="no">②</td><td class="qitem">片脚180°回旋着地<br>（180° スイッチ）</td><td class="points">・回旋時の体幹・骨盤コントロール<br>・膝・股関節の屈曲・衝撃吸収<br>・着地のアライメント</td><td class="rating"><label>○<input type="radio" name="q2" value="1"></label><label>△<input type="radio" name="q2" value="0"></label><label>×<input type="radio" name="q2" value="0"></label></td></tr>
+          <tr><td class="no">③</td><td class="qitem">片脚90°回旋着地<br>（90° スイッチ）</td><td class="points">・回旋時の体幹・骨盤コントロール<br>・膝・股関節の屈曲・衝撃吸収<br>・着地のアライメント</td><td class="rating"><label>○<input type="radio" name="q3" value="1"></label><label>△<input type="radio" name="q3" value="0"></label><label>×<input type="radio" name="q3" value="0"></label></td></tr>
+          <tr><td class="no">④</td><td class="qitem">Single Hop<br>（片脚ホップ）</td><td class="points">・着地時の膝のアライメント<br>・膝・股関節の屈曲・安定性<br>・リズム・スムーズさ</td><td class="rating"><label>○<input type="radio" name="q4" value="1"></label><label>△<input type="radio" name="q4" value="0"></label><label>×<input type="radio" name="q4" value="0"></label></td></tr>
+          <tr><td class="no">⑤</td><td class="qitem">Triple Hop<br>（3連続ホップ）</td><td class="points">・膝・股関節の安定性<br>・リズム・連続性<br>・スムーズさ</td><td class="rating"><label>○<input type="radio" name="q5" value="1"></label><label>△<input type="radio" name="q5" value="0"></label><label>×<input type="radio" name="q5" value="0"></label></td></tr>
+          <tr><td class="no">⑥</td><td class="qitem">Crossover Hop<br>（クロスオーバーホップ）</td><td class="points">・クロス動作時の膝・股関節の安定性<br>・体幹のコントロール<br>・リズム・スムーズさ</td><td class="rating"><label>○<input type="radio" name="q6" value="1"></label><label>△<input type="radio" name="q6" value="0"></label><label>×<input type="radio" name="q6" value="0"></label></td></tr>
+          <tr><td class="no">⑦</td><td class="qitem">6m Timed Hop<br>（6mホップタイム）</td><td class="points">・スピード中の体幹コントロール<br>・膝・股関節の安定性<br>・リズム・スムーズさ</td><td class="rating"><label>○<input type="radio" name="q7" value="1"></label><label>△<input type="radio" name="q7" value="0"></label><label>×<input type="radio" name="q7" value="0"></label></td></tr>
+          <tr><td class="no">⑧</td><td class="qitem">Drop Jump<br>（ドロップジャンプ）</td><td class="points">・着地時の膝のアライメント<br>・膝・股関節の屈曲・衝撃吸収<br>・体幹・骨盤の安定性</td><td class="rating"><label>○<input type="radio" name="q8" value="1"></label><label>△<input type="radio" name="q8" value="0"></label><label>×<input type="radio" name="q8" value="0"></label></td></tr>
+          <tr><td class="no">⑨</td><td class="qitem">Run Stop<br>（ランストップ）</td><td class="points">・減速時の姿勢コントロール<br>・膝・股関節の屈曲・衝撃吸収<br>・体幹の安定性</td><td class="rating"><label>○<input type="radio" name="q9" value="1"></label><label>△<input type="radio" name="q9" value="0"></label><label>×<input type="radio" name="q9" value="0"></label></td></tr>
+          <tr><td class="no">⑩</td><td class="qitem">T-test<br>（アジリティテスト）</td><td class="points">・方向転換時の姿勢・体幹コントロール<br>・加速・減速時の膝・股関節コントロール<br>・切り返し動作のスムーズさ</td><td class="rating"><label>○<input type="radio" name="q10" value="1"></label><label>△<input type="radio" name="q10" value="0"></label><label>×<input type="radio" name="q10" value="0"></label></td></tr>
+        </tbody>
+      </table>
+      <div class="scorebox">質的評価 合計点 <span class="score" id="qualScore">0</span> / 10</div>
+    </section>
+  </div>
+
+  <div class="subgrid">
+    <div class="card green"><h3>量的評価の点数化（全10項目：10点満点）</h3>
+      <table class="criteria-table"><tr><td>8 ～ 10点</td><td class="pass">合格（非対人練習へ進行可能）</td></tr><tr><td>6 ～ 7点</td><td class="warn">要再評価・課題に取り組み再テスト</td></tr><tr><td>0 ～ 5点</td><td class="fail">不合格（非対人練習へ進行不可）</td></tr></table>
+    </div>
+    <div class="card orange"><h3>質的評価の点数化（全10項目：10点満点）</h3>
+      <table class="criteria-table"><tr><td>8 ～ 10点</td><td class="pass">合格（非対人練習へ進行可能）</td></tr><tr><td>6 ～ 7点</td><td class="warn">要再評価・課題に取り組み再テスト</td></tr><tr><td>0 ～ 5点</td><td class="fail">不合格（進行不可・再評価）</td></tr></table>
+    </div>
+  </div>
+
+  <div class="final">
+    <h3>総合判定（Gate 1：非対人練習への復帰判断）</h3>
+    <div id="overallJudgment" class="overall pending">
+      <span class="overall-label">総合判定</span>
+      <span id="overallText">未判定</span>
+      <span id="overallSub">量的・質的評価を入力してください</span>
+    </div>
+    <table><tr><td>量的評価：8～10点 かつ<br>質的評価：8～10点</td><td class="pass">→ 合格（非対人練習へ進行可能）</td></tr>
+    <tr><td>いずれかが6～7点</td><td class="warn">→ 要再評価・課題に取り組み再テスト</td></tr>
+    <tr><td>いずれかが0～5点</td><td class="fail">→ 不合格（進行不可・再評価）</td></tr></table>
+  </div>
+
+  <div class="checks">
+    <h3>質的評価のチェックポイント（共通）</h3>
+    <label><input type="checkbox"> 膝が内側に入っていない（Knee-in+後方重心 なし）</label>
+    <label><input type="checkbox"> 着地時に膝・股関節を適切に屈曲できている</label>
+    <label><input type="checkbox"> 体幹・骨盤が安定している</label>
+    <label><input type="checkbox"> 左右差や動きのぎこちなさがない</label>
+    <label><input type="checkbox"> 痛みや不安感の出現がない</label>
+  </div>
+
+  <div class="next">
+    <h3>次のステップ（進行イメージ）</h3>
+    <div class="flow">
+      <div class="step">6ヶ月テスト<br>（Gate 1）<br>チェックリストで評価</div><div class="arrow">→</div>
+      <div class="step">合格した場合<br>非対人練習へ進行</div><div class="arrow">→</div>
+      <div class="step">段階的に強度を上げる<br>（基礎 → 中等度 → 高強度）</div><div class="arrow">→</div>
+      <div class="step">9ヶ月テスト<br>（Gate 2）<br>チェックリストで再評価</div><div class="arrow">→</div>
+      <div class="step">対人練習へ進み<br>完全復帰を目指す</div>
+    </div>
+  </div>
+
+  <div class="footer">※本チェックリストは一般的な指針であり、個々の患者の状態・術式・合併損傷・競技特性などに応じて適切に修正してください。</div>
+  <div class="footer" style="text-align:right">作成：理学療法士・スポーツリハビリテーション用資料</div>
+</div>
+
+<script>
+function updateScores(){
+  const qScore = document.querySelectorAll('.qcheck:checked').length;
+  document.getElementById('qScore').textContent = qScore;
+  let n=0;
+  for(let i=1;i<=10;i++){
+    const checked=document.querySelector('input[name="q'+i+'"]:checked');
+    if(checked && checked.value==="1") n++;
+  }
+  document.getElementById('qualScore').textContent=n;
+
+  const overall = document.getElementById('overallJudgment');
+  const overallText = document.getElementById('overallText');
+  const overallSub = document.getElementById('overallSub');
+  overall.className = 'overall';
+  if(qScore >= 8 && n >= 8){
+    overall.classList.add('pass');
+    overallText.textContent = '合格';
+    overallSub.textContent = '非対人練習へ進行可能';
+  }else if(qScore <= 5 || n <= 5){
+    overall.classList.add('fail');
+    overallText.textContent = '不合格';
+    overallSub.textContent = '進行不可・再評価';
+  }else if(qScore >= 6 || n >= 6){
+    overall.classList.add('warn');
+    overallText.textContent = '要再評価';
+    overallSub.textContent = '課題に取り組み再テスト';
+  }else{
+    overall.classList.add('pending');
+    overallText.textContent = '未判定';
+    overallSub.textContent = '量的・質的評価を入力してください';
+  }
+}
+document.querySelectorAll('input').forEach(x=>x.addEventListener('change',updateScores));
+function resetAll(){
+  document.querySelectorAll('input').forEach(x=>x.checked=false);
+  updateScores();
+}
+updateScores();
+</script>
+</body>
+</html>
